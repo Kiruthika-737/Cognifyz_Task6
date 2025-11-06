@@ -1,64 +1,68 @@
-Cognifyz Internship Task 6: Database Integration and User Authentication
-Overview
-This project demonstrates database integration and secure user authentication using Node.js, Express, and MongoDB Atlas, as part of my Full Stack Developer internship at Cognifyz Technologies.
+# Cognifyz Internship Task 6: Database Integration and User Authentication
 
-Features
-User registration and login API
+## 📚 Overview
+This project demonstrates secure user authentication and database integration using Node.js, Express, and MongoDB Atlas. It was completed as part of my Full Stack Developer internship at Cognifyz Technologies.
 
-Password hashing with bcrypt
+## 🚀 Features
+- User registration and login API
+- Password hashing with bcrypt
+- JWT-based user authentication
+- Protected API routes (accessible only with a valid JWT)
 
-JWT-based authentication
+## 🛠️ Technologies Used
+- **Node.js** (backend runtime)
+- **Express** (web framework)
+- **MongoDB Atlas** & **Mongoose** (NoSQL database and ORM)
+- **bcryptjs** (password hashing)
+- **jsonwebtoken** (JWT-based authentication)
+- **dotenv** (environment variable management)
 
-Protected routes accessible only to authenticated users
+## ⚙️ Setup Instructions
 
-Technologies
-Node.js
-
-Express
-
-MongoDB Atlas & Mongoose
-
-bcryptjs (for password security)
-
-jsonwebtoken (JWT auth)
-
-dotenv (environment variables)
-
-Setup
-Clone/download the repo and open in VS Code
-
-Install dependencies:
+1. **Clone this repository and open in VS Code**
+git clone https://github.com/yourusername/Cognifyz_Task6.git
+cd Cognifyz_Task6
 
 text
+
+2. **Install dependencies**
 npm install
-Create a .env file and add:
 
 text
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-Start the server:
+
+3. **Create a `.env` file** in the root directory (refer `.env.example` for structure):
+MONGO_URI=your_mongodb_atlas_uri
+JWT_SECRET=your_secret_string
 
 text
+
+4. **Start the server**
 npx nodemon app.js
-API Endpoints
-POST /api/auth/register
-Register a user
-Body: { "username": "...", "password": "..." }
 
-POST /api/auth/login
-Authenticate user, returns JWT
-Body: { "username": "...", "password": "..." }
+text
+or
+node app.js
 
-GET /api/auth/protected
-Protected route, requires Authorization: Bearer <token> header
+text
 
-Demo
-Demonstrated with Thunder Client (VS Code) — see video/screenshots for API testing.
+5. **Test the endpoints** using a REST client such as Thunder Client (VS Code) or Postman.
 
-Acknowledgements
-Cognifyz Technologies
+## 🧪 API Endpoints
 
-Internship guidelines
+| Method | Endpoint                | Description                            | Body Example                                | Headers                         |
+|--------|-------------------------|----------------------------------------|---------------------------------------------|---------------------------------|
+| POST   | `/api/auth/register`    | Register a new user                    | `{ "username": "user", "password": "pw" }`  |                                 |
+| POST   | `/api/auth/login`       | Login, returns JWT token               | `{ "username": "user", "password": "pw" }`  |                                 |
+| GET    | `/api/auth/protected`   | Protected route, JWT token required    |                                             | `Authorization: <token>`        |
 
-Hashtags for LinkedIn
-#cognifyz #cognifyzTech #cognifyzTechnologies
+## 🖥️ Demo
+
+- Tested using **Thunder Client** (VS Code REST client).
+- See demo/video files (if submitted) for request/response examples.
+
+## 🙏 Acknowledgements
+
+- **Cognifyz Technologies** — Internship provider and guideline source.
+- All mentors and contributors in the Node.js/MongoDB/Express communities.
+
+While building this project, I learned the importance of using environment variables for security and enjoyed integrating JWT authentication for the first time.
