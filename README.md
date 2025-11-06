@@ -23,27 +23,21 @@ This project demonstrates secure user authentication and database integration us
 git clone https://github.com/yourusername/Cognifyz_Task6.git
 cd Cognifyz_Task6
 
-text
 
 2. **Install dependencies**
 npm install
 
-text
 
 3. **Create a `.env` file** in the root directory (refer `.env.example` for structure):
 MONGO_URI=your_mongodb_atlas_uri
 JWT_SECRET=your_secret_string
 
-text
 
 4. **Start the server**
 npx nodemon app.js
-
-text
 or
 node app.js
 
-text
 
 5. **Test the endpoints** using a REST client such as Thunder Client (VS Code) or Postman.
 
